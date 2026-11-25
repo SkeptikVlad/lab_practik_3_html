@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Список самых кассовых фильмов</title>
+</head>
+<body>
+  <div>
+    <ul type="none">
+      <li><a href="index.html">Самые кассовые фильмы</a></li>
+      <li><a href="table.html"><b>Список самых кассовых фильмов</b></a></li>
+    </ul>
+  </div>
+  <hr>
+
+  <div>
+    <details>
+      <summary>График</summary>
+      <form action="#">
+        <h4>Значение по оси OX</h4>
+        <p>
+          <label><input type="radio" name="ox" value="genre" id="genre">Жанр</label><br>
+          <label><input type="radio" name="ox" value="director" id="director">Режиссёр</label><br>
+          <label><input type="radio" name="ox" value="year" id="year">Год</label>
+        </p>
+        <h4>Значение по оси OY</h4>
+        <p>
+          <label><input type="checkbox" name="oy" value="us" id="us"> Суммарные сборы в США</label><br>
+          <label><input type="checkbox" name="oy" value="world" id="world"> Суммарные сборы в мире</label>
+        </p>
+        <p><input type="button" value="Построить" id="Построить"></p>
+      </form>
+      <p>Здесь будет график</p>
+    </details>
+
+    <details>
+      <summary>Фильтр</summary>
+      <form action="#">
+        <p><label>Название: <input type="text" name="title" id="title"></label></p>
+        <p><label>Жанр: <input type="text" name="genre" id="genre"></label></p>
+        <p><label>Режиссёр: <input type="text" name="director" id="director"></label></p>
+        <p>
+          <label>Год: от <input type="number" name="yearFrom" id="yearFrom" min="0"></label>
+          <label>до <input type="number" name="yearTo" id="yearTo" min="0"></label>
+        </p>
+        <p>
+          <label>Сборы в США: от <input type="number" name="usFrom" id="usFrom" min="0"></label>
+          <label>до <input type="number" name="usTo" id="usTo" min="0"></label>
+        </p>
+        <p>
+          <label>Сборы в мире: от <input type="number" name="worldFrom" id="worldFrom" min="0"></label>
+          <label>до <input type="number" name="worldTo" id="worldTo" min="0"></label>
+        </p>
+        <p>
+          <input type="button" value="Найти" id="Найти">
+        </p>
+      </form>
+    </details>
+
+    <details>
+      <summary>Сортировка</summary>
+      <form action="#">
+      <p>
+        <label>Первый уровень:
+          <select id="select">
+            <option value="none">Нет</option>
+            <option value="title">Название</option>
+            <option value="genre">Жанр</option>
+            <option value="director">Режиссёр</option>
+            <option value="year">Год</option>
+            <option value="us">Сборы в США</option>
+            <option value="world">Сборы в мире</option>
+          </select></label>
+        <label>по убыванию? <input type="checkbox" id=""></label>
+      </p>
+      <p>
+        <label>Второй уровень:
+          <select id="select">
+            <option value="none">Нет</option>
+            <option value="title">Название</option>
+            <option value="genre">Жанр</option>
+            <option value="director">Режиссёр</option>
+            <option value="year">Год</option>
+            <option value="us">Сборы в США</option>
+            <option value="world">Сборы в мире</option>
+          </select></label>
+        <label>по убыванию? <input type="checkbox" id=""></label>
+      </p>
+      <p>
+        <label>Третий уровень:
+          <select id="select">
+            <option value="none">Нет</option>
+            <option value="title">Название</option>
+            <option value="genre">Жанр</option>
+            <option value="director">Режиссёр</option>
+            <option value="year">Год</option>
+            <option value="us">Сборы в США</option>
+            <option value="world">Сборы в мире</option>
+          </select></label>
+        <label>по убыванию? <input type="checkbox" id=""></label>
+      </p>
+        <p>
+          <input type="button" value="Сортировать" id="">
+        </p>
+      </form>
+    </details>
+
+    <table border="1" cellpadding="5" cellspacing="0" width="100%">
+      <caption><b>Самые кассовые фильмы (сборы в млн $)</b></caption>
+      <thead>
+          <tr>
+          <th>Название</th>
+          <th>Жанр</th>
+          <th>Режиссёр</th>
+          <th>Год</th>
+          <th>Сборы в США, млн $</th>
+          <th>Сборы в мире, млн $</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>Аватар</td>
+        <td>Фантастика</td>
+        <td>Джеймс Кэмерон</td>
+        <td align="center">2009</td>
+        <td align="right">785</td>
+        <td align="right">2923</td>
+      </tr>
+      <tr>
+        <td>Мстители: Финал</td>
+        <td>Супергеройский</td>
+        <td>Братья Руссо</td>
+        <td align="center">2019</td>
+        <td align="right">858</td>
+        <td align="right">2799</td>
+      </tr>
+      <tr>
+        <td>Аватар: Путь воды</td>
+        <td>Фантастика</td>
+        <td>Джеймс Кэмерон</td>
+        <td align="center">2022</td>
+        <td align="right">684</td>
+        <td align="right">2320</td>
+      </tr>
+      <tr>
+        <td>Титаник</td>
+        <td>Драма</td>
+        <td>Джеймс Кэмерон</td>
+        <td align="center">1997</td>
+        <td align="right">674</td>
+        <td align="right">2264</td>
+      </tr>
+      <tr>
+        <td>Звёздные войны: Пробуждение силы</td>
+        <td>Фантастика</td>
+        <td>Джей Джей Абрамс</td>
+        <td align="center">2015</td>
+        <td align="right">936</td>
+        <td align="right">2068</td>
+      </tr>
+      <tr>
+        <td>Мстители: Война бесконечности</td>
+        <td>Супергеройский</td>
+        <td>Братья Руссо</td>
+        <td align="center">2018</td>
+        <td align="right">679</td>
+        <td align="right">2052</td>
+      </tr>
+      <tr>
+        <td>Человек-паук: Нет пути домой</td>
+        <td>Супергеройский</td>
+        <td>Джон Уоттс</td>
+        <td align="center">2021</td>
+        <td align="right">814</td>
+        <td align="right">1922</td>
+      </tr>
+      <tr>
+        <td>Головоломка 2</td>
+        <td>Мультфильм</td>
+        <td>Келси Манн</td>
+        <td align="center">2024</td>
+        <td align="right">653</td>
+        <td align="right">1699</td>
+      </tr>
+      <tr>
+        <td>Мир Юрского периода</td>
+        <td>Приключения</td>
+        <td>Колин Треворроу</td>
+        <td align="center">2015</td>
+        <td align="right">653</td>
+        <td align="right">1671</td>
+      </tr>
+      <tr>
+        <td>Король Лев</td>
+        <td>Приключения</td>
+        <td>Джон Фавро</td>
+        <td align="center">2019</td>
+        <td align="right">544</td>
+        <td align="right">1663</td>
+      </tr>
+      <tr>
+        <td>Мстители</td>
+        <td>Супергеройский</td>
+        <td>Джосс Уидон</td>
+        <td align="center">2012</td>
+        <td align="right">623</td>
+        <td align="right">1521</td>
+      </tr>
+      <tr>
+        <td>Форсаж 7</td>
+        <td>Боевик</td>
+        <td>Джеймс Ван</td>
+        <td align="center">2015</td>
+        <td align="right">353</td>
+        <td align="right">1515</td>
+      </tr>
+      <tr>
+        <td>Топ Ган: Мэверик</td>
+        <td>Боевик</td>
+        <td>Джозеф Косински</td>
+        <td align="center">2022</td>
+        <td align="right">719</td>
+        <td align="right">1496</td>
+      </tr>
+      <tr>
+        <td>Холодное сердце 2</td>
+        <td>Мультфильм</td>
+        <td>Крис Бак</td>
+        <td align="center">2019</td>
+        <td align="right">477</td>
+        <td align="right">1453</td>
+      </tr>
+      <tr>
+        <td>Барби</td>
+        <td>Комедия</td>
+        <td>Грета Гервиг</td>
+        <td align="center">2023</td>
+        <td align="right">636</td>
+        <td align="right">1446</td>
+      </tr>
+      <tr>
+        <td>Мстители: Эра Альтрона</td>
+        <td>Супергеройский</td>
+        <td>Джосс Уидон</td>
+        <td align="center">2015</td>
+        <td align="right">459</td>
+        <td align="right">1405</td>
+      </tr>
+      <tr>
+        <td>Супербратья Марио в кино</td>
+        <td>Мультфильм</td>
+        <td>Аарон Хорват</td>
+        <td align="center">2023</td>
+        <td align="right">574</td>
+        <td align="right">1362</td>
+      </tr>
+      <tr>
+        <td>Чёрная пантера</td>
+        <td>Супергеройский</td>
+        <td>Райан Куглер</td>
+        <td align="center">2018</td>
+        <td align="right">700</td>
+        <td align="right">1349</td>
+      </tr>
+      <tr>
+        <td>Гарри Поттер и Дары Смерти: Часть 2</td>
+        <td>Фэнтези</td>
+        <td>Дэвид Йейтс</td>
+        <td align="center">2011</td>
+        <td align="right">381</td>
+        <td align="right">1342</td>
+      </tr>
+      <tr>
+        <td>Дэдпул и Росомаха</td>
+        <td>Супергеройский</td>
+        <td>Шон Леви</td>
+        <td align="center">2024</td>
+        <td align="right">637</td>
+        <td align="right">1338</td>
+      </tr>
+      <tr>
+        <td>Звёздные войны: Последние джедаи</td>
+        <td>Фантастика</td>
+        <td>Райан Джонсон</td>
+        <td align="center">2017</td>
+        <td align="right">620</td>
+        <td align="right">1333</td>
+      </tr>
+      <tr>
+        <td>Мир Юрского периода 2</td>
+        <td>Приключения</td>
+        <td>Хуан Антонио Байона</td>
+        <td align="center">2018</td>
+        <td align="right">418</td>
+        <td align="right">1310</td>
+      </tr>
+      <tr>
+        <td>Холодное сердце</td>
+        <td>Мультфильм</td>
+        <td>Крис Бак</td>
+        <td align="center">2013</td>
+        <td align="right">401</td>
+        <td align="right">1290</td>
+      </tr>
+      <tr>
+        <td>Красавица и чудовище</td>
+        <td>Мюзикл</td>
+        <td>Билл Кондон</td>
+        <td align="center">2017</td>
+        <td align="right">504</td>
+        <td align="right">1264</td>
+      </tr>
+      <tr>
+        <td>Суперсемейка 2</td>
+        <td>Мультфильм</td>
+        <td>Брэд Бёрд</td>
+        <td align="center">2018</td>
+        <td align="right">609</td>
+        <td align="right">1243</td>
+      </tr>
+      <tr>
+        <td>Форсаж 8</td>
+        <td>Боевик</td>
+        <td>Ф. Гэри Грей</td>
+        <td align="center">2017</td>
+        <td align="right">226</td>
+        <td align="right">1236</td>
+      </tr>
+      <tr>
+        <td>Железный человек 3</td>
+        <td>Супергеройский</td>
+        <td>Шейн Блэк</td>
+        <td align="center">2013</td>
+        <td align="right">409</td>
+        <td align="right">1215</td>
+      </tr>
+      <tr>
+        <td>Миньоны</td>
+        <td>Мультфильм</td>
+        <td>Пьер Коффен</td>
+        <td align="center">2015</td>
+        <td align="right">336</td>
+        <td align="right">1159</td>
+      </tr>
+      <tr>
+        <td>Первый мститель: Противостояние</td>
+        <td>Супергеройский</td>
+        <td>Братья Руссо</td>
+        <td align="center">2016</td>
+        <td align="right">408</td>
+        <td align="right">1153</td>
+      </tr>
+      <tr>
+        <td>Аквамен</td>
+        <td>Супергеройский</td>
+        <td>Джеймс Ван</td>
+        <td align="center">2018</td>
+        <td align="right">335</td>
+        <td align="right">1152</td>
+      </tr>
+      <tr>
+        <td>Властелин колец: Возвращение короля</td>
+        <td>Фэнтези</td>
+        <td>Питер Джексон</td>
+        <td align="center">2003</td>
+        <td align="right">381</td>
+        <td align="right">1147</td>
+      </tr>
+      <tr>
+        <td>Человек-паук: Вдали от дома</td>
+        <td>Супергеройский</td>
+        <td>Джон Уоттс</td>
+        <td align="center">2019</td>
+        <td align="right">391</td>
+        <td align="right">1132</td>
+      </tr>
+      <tr>
+        <td>Капитан Марвел</td>
+        <td>Супергеройский</td>
+        <td>Анна Боден</td>
+        <td align="center">2019</td>
+        <td align="right">427</td>
+        <td align="right">1131</td>
+      </tr>
+      <tr>
+        <td>Трансформеры 3: Тёмная сторона Луны</td>
+        <td>Фантастика</td>
+        <td>Майкл Бэй</td>
+        <td align="center">2011</td>
+        <td align="right">352</td>
+        <td align="right">1124</td>
+      </tr>
+      <tr>
+        <td>007: Координаты «Скайфолл»</td>
+        <td>Боевик</td>
+        <td>Сэм Мендес</td>
+        <td align="center">2012</td>
+        <td align="right">304</td>
+        <td align="right">1109</td>
+      </tr>
+      <tr>
+        <td>Трансформеры: Эпоха истребления</td>
+        <td>Фантастика</td>
+        <td>Майкл Бэй</td>
+        <td align="center">2014</td>
+        <td align="right">245</td>
+        <td align="right">1104</td>
+      </tr>
+      <tr>
+        <td>Тёмный рыцарь: Возрождение легенды</td>
+        <td>Супергеройский</td>
+        <td>Кристофер Нолан</td>
+        <td align="center">2012</td>
+        <td align="right">448</td>
+        <td align="right">1081</td>
+      </tr>
+      <tr>
+        <td>Джокер</td>
+        <td>Драма</td>
+        <td>Тодд Филлипс</td>
+        <td align="center">2019</td>
+        <td align="right">335</td>
+        <td align="right">1079</td>
+      </tr>
+      <tr>
+        <td>Звёздные войны: Скайуокер. Восход</td>
+        <td>Фантастика</td>
+        <td>Джей Джей Абрамс</td>
+        <td align="center">2019</td>
+        <td align="right">515</td>
+        <td align="right">1077</td>
+      </tr>
+      <tr>
+        <td>История игрушек 4</td>
+        <td>Мультфильм</td>
+        <td>Джош Кули</td>
+        <td align="center">2019</td>
+        <td align="right">434</td>
+        <td align="right">1073</td>
+      </tr>
+      <tr>
+        <td>История игрушек 3</td>
+        <td>Мультфильм</td>
+        <td>Ли Анкрич</td>
+        <td align="center">2010</td>
+        <td align="right">415</td>
+        <td align="right">1067</td>
+      </tr>
+      <tr>
+        <td>Пираты Карибского моря: Сундук мертвеца</td>
+        <td>Приключения</td>
+        <td>Гор Вербински</td>
+        <td align="center">2006</td>
+        <td align="right">423</td>
+        <td align="right">1066</td>
+      </tr>
+      <tr>
+        <td>Моана 2</td>
+        <td>Мультфильм</td>
+        <td>Дэвид Деррик мл.</td>
+        <td align="center">2024</td>
+        <td align="right">460</td>
+        <td align="right">1059</td>
+      </tr>
+      <tr>
+        <td>Изгой-один. Звёздные войны: Истории</td>
+        <td>Фантастика</td>
+        <td>Гарет Эдвардс</td>
+        <td align="center">2016</td>
+        <td align="right">532</td>
+        <td align="right">1057</td>
+      </tr>
+      <tr>
+        <td>Аладдин</td>
+        <td>Фэнтези</td>
+        <td>Гай Ричи</td>
+        <td align="center">2019</td>
+        <td align="right">356</td>
+        <td align="right">1051</td>
+      </tr>
+      <tr>
+        <td>Пираты Карибского моря: На странных берегах</td>
+        <td>Приключения</td>
+        <td>Роб Маршалл</td>
+        <td align="center">2011</td>
+        <td align="right">241</td>
+        <td align="right">1046</td>
+      </tr>
+      <tr>
+        <td>Гадкий я 3</td>
+        <td>Мультфильм</td>
+        <td>Пьер Коффен</td>
+        <td align="center">2017</td>
+        <td align="right">265</td>
+        <td align="right">1035</td>
+      </tr>
+      <tr>
+        <td>В поисках Дори</td>
+        <td>Мультфильм</td>
+        <td>Эндрю Стэнтон</td>
+        <td align="center">2016</td>
+        <td align="right">486</td>
+        <td align="right">1029</td>
+      </tr>
+      <tr>
+        <td>Алиса в Стране чудес</td>
+        <td>Фэнтези</td>
+        <td>Тим Бёртон</td>
+        <td align="center">2010</td>
+        <td align="right">334</td>
+        <td align="right">1025</td>
+      </tr>
+      <tr>
+        <td>Зверополис</td>
+        <td>Мультфильм</td>
+        <td>Байрон Ховард</td>
+        <td align="center">2016</td>
+        <td align="right">341</td>
+        <td align="right">1024</td>
+      </tr>
+      <tr>
+        <td>Хоббит: Нежданное путешествие</td>
+        <td>Фэнтези</td>
+        <td>Питер Джексон</td>
+        <td align="center">2012</td>
+        <td align="right">303</td>
+        <td align="right">1017</td>
+      </tr>
+      <tr>
+        <td>Тёмный рыцарь</td>
+        <td>Супергеройский</td>
+        <td>Кристофер Нолан</td>
+        <td align="center">2008</td>
+        <td align="right">534</td>
+        <td align="right">1006</td>
+      </tr>
+      <tr>
+        <td>Оппенгеймер</td>
+        <td>Драма</td>
+        <td>Кристофер Нолан</td>
+        <td align="center">2023</td>
+        <td align="right">330</td>
+        <td align="right">976</td>
+      </tr>
+      <tr>
+        <td>Шрек 2</td>
+        <td>Мультфильм</td>
+        <td>Эндрю Адамсон</td>
+        <td align="center">2004</td>
+        <td align="right">441</td>
+        <td align="right">933</td>
+      </tr>
+      <tr>
+        <td>Начало</td>
+        <td>Фантастика</td>
+        <td>Кристофер Нолан</td>
+        <td align="center">2010</td>
+        <td align="right">292</td>
+        <td align="right">837</td>
+      </tr>
+      <tr>
+        <td>Интерстеллар</td>
+        <td>Фантастика</td>
+        <td>Кристофер Нолан</td>
+        <td align="center">2014</td>
+        <td align="right">203</td>
+        <td align="right">758</td>
+      </tr>
+      <tr>
+        <td>Матрица: Перезагрузка</td>
+        <td>Фантастика</td>
+        <td>Братья Вачовски</td>
+        <td align="center">2003</td>
+        <td align="right">282</td>
+        <td align="right">742</td>
+      </tr>
+      <tr>
+        <td>Дюна: Часть вторая</td>
+        <td>Фантастика</td>
+        <td>Дени Вильнёв</td>
+        <td align="center">2024</td>
+        <td align="right">282</td>
+        <td align="right">714</td>
+      </tr>
+      <tr>
+        <td>Форрест Гамп</td>
+        <td>Драма</td>
+        <td>Роберт Земекис</td>
+        <td align="center">1994</td>
+        <td align="right">330</td>
+        <td align="right">678</td>
+      </tr>
+      <tr>
+        <td>Гладиатор</td>
+        <td>Исторический</td>
+        <td>Ридли Скотт</td>
+        <td align="center">2000</td>
+        <td align="right">188</td>
+        <td align="right">460</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
